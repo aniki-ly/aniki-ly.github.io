@@ -462,22 +462,40 @@
 
     
             var currentPromptIndex = 0;
-    
+
             function updatePromptAndVideos() {
                 var promptData = prompts[currentPromptIndex];
                 document.getElementById('video-prompt').textContent = "以下的视频来自于: \"" + promptData.prompt + "\"";
-    
+
                 var container = document.getElementById('video-container');
                 container.innerHTML = ''; // Clear existing videos
                 promptData.videos.forEach(function(videoSrc, index) {
                     var videoDiv = document.createElement('div');
+                    videoDiv.style.cssText = `
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    `;
+
                     var videoEl = document.createElement('video');
                     videoEl.autoplay = true;
                     videoEl.muted = true;
                     videoEl.loop = true;
                     videoEl.innerHTML = '<source src="' + videoSrc + '" type="video/mp4">';
+                    videoEl.style.cssText = `
+                        width: 300px;
+                        height: 200px;
+                        margin-bottom: 10px;
+                    `;
+
                     var label = document.createElement('p');
                     label.textContent = String.fromCharCode('A'.charCodeAt(0) + index);
+                    label.style.cssText = `
+                        font-size: 24px;
+                        font-weight: bold;
+                    `;
+
                     videoDiv.appendChild(videoEl);
                     videoDiv.appendChild(label);
                     container.appendChild(videoDiv);
