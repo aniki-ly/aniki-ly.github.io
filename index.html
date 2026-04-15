@@ -8,23 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Yu Lu</title>
     <style type="text/css">
-    hr { 
-    background-color:black;
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
-    } 
-    img.profile {
-	border-radius: 50%;
-	width: 85%; 
-	height: Auto;
+
+    body {
+        font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: #2c3e50;
+        background-color: #fafafa;
+        line-height: 1.7;
     }
+
+    a {
+        color: #1a5276;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    a:hover {
+        color: #2980b9;
+        text-decoration: underline;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #dce1e6;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    img.profile {
+        border-radius: 50%;
+        width: 85%;
+        height: auto;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
     .center {
         text-align: center;
     }
@@ -32,40 +53,108 @@
     .lead {
         font-size: 0.95rem;
         text-align: left;
+        color: #34495e;
     }
 
     .subtitle {
-        font-size: 1.7rem;
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.55rem;
+        font-weight: 700;
         text-align: left;
+        color: #1a2332;
+        margin-bottom: 0.8rem;
     }
 
     .title {
+        font-family: 'Roboto Slab', serif;
         font-size: 2.2rem;
+        font-weight: 700;
         text-align: left;
+        color: #1a2332;
     }
 
     .ttitle {
-    font-size: 1.2rem;
-    text-align: left;
+        font-size: 1.15rem;
+        text-align: left;
+        color: #4a5568;
+        font-weight: 400;
+    }
+
+    .links a {
+        display: inline-block;
+        margin-right: 12px;
+        padding: 2px 0;
+        font-size: 0.92rem;
+        color: #34495e;
+    }
+    .links a:hover {
+        color: #1a5276;
+        text-decoration: none;
+    }
+    .links a i {
+        margin-right: 3px;
     }
 
     .badge-new {
-        background: linear-gradient(135deg, #e63946 0%, #ff6b6b 100%);
+        background-color: #c0392b;
         color: white;
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         font-weight: 600;
-        padding: 3px 8px;
-        border-radius: 4px;
-        margin-left: 6px;
+        padding: 2px 7px;
+        border-radius: 3px;
+        margin-right: 4px;
         vertical-align: middle;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        animation: pulse-subtle 2s ease-in-out infinite;
     }
 
-    @keyframes pulse-subtle {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.85; }
+    .list-group-item {
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+
+    .pub-row {
+        margin-bottom: 0.6rem;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .pub-row:last-child {
+        border-bottom: none;
+    }
+
+    .pub-links a {
+        font-size: 0.88rem;
+        margin-right: 6px;
+        color: #1a5276;
+        font-weight: 600;
+    }
+
+    .container.border {
+        border-color: #e8ecf0 !important;
+        background-color: #ffffff;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    }
+
+    footer {
+        text-align: center;
+        padding: 1.2rem 0;
+        font-size: 0.82rem;
+        color: #95a5a6;
+        border-top: 1px solid #eee;
+        margin-top: 1.5rem;
+    }
+
+    .btn-toggle-news {
+        display: inline-block;
+        font-size: 0.85rem;
+        color: #1a5276;
+        cursor: pointer;
+        padding: 4px 0;
+        margin-top: 2px;
+    }
+    .btn-toggle-news:hover {
+        color: #2980b9;
+        text-decoration: underline;
     }
 
     </style>
@@ -81,74 +170,70 @@
 </head>
 
 <body>
-    <div class="container border" style="margin-top:10px;">
+    <div class="container border" style="margin-top:20px; margin-bottom:20px; padding-bottom:0; border-radius:4px;">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <!-- Intro -->
                 <div>
                     <div class="row">
-                        <div class="col-sm-5">
-                            <img src="images/haofan.jpg" alt="" class="figure-img img-fluid profile" style="margin:10px; width:70%;">
+                        <div class="col-sm-4">
+                            <img src="images/haofan.jpg" alt="" class="figure-img img-fluid profile" style="margin:10px;">
                         </div>
-                            <div class="col" style="margin-top: auto; margin-bottom: auto;">
-                                <header>
-                                    <h3 class="title">Yu Lu </h3>
-                                    <h3 class="ttitle">Postdoctoral Researcher<br/></h3>
-                                    Zhejiang University<br/>
-                                    Email: aniki.yulu [AT] gmail dot com<br/>
-                                    <div class="links">
-                                        <a href='https://scholar.google.com/citations?user=QQUmpsgAAAAJ'>[Google Scholar]</a>
-                        <a href='https://github.com/aniki-ly'>[Github]</a>
-					    <a href='https://twitter.com/luyu79797018'>[Twitter]</a>
-					    <a href='https://www.linkedin.com/in/yu-lu-50413a23a/'>[LinkedIn]</a>
-                                    </div>
-                                </header>
-                            </div>
+                        <div class="col" style="margin-top: auto; margin-bottom: auto;">
+                            <header>
+                                <h3 class="title">Yu Lu</h3>
+                                <h3 class="ttitle">Postdoctoral Researcher</h3>
+                                Zhejiang University<br/>
+                                Email: aniki.yulu [at] gmail.com
+                                <div class="links">
+                                    <a href='https://scholar.google.com/citations?user=QQUmpsgAAAAJ' title="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                                    <a href='https://github.com/aniki-ly' title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                                    <a href='https://twitter.com/luyu79797018' title="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                                    <a href='https://www.linkedin.com/in/yu-lu-50413a23a/' title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                                </div>
+                            </header>
                         </div>
                     </div>
-                    <br/>
+                </div>
 
-                    <div>
-                        <!-- <h3 class="subtitle">About Me</h3> -->
-                        <p class="lead">
-                            Yu Lu (路雨) is a Postdoctoral Researcher at Zhejiang University, where he is leading a small research team that mostly works on video and image generative models. Before that, he obtained his Ph.D. degree at University of Technology Sydney (UTS). His academic advisor is <a href="http://reler.net/people/yi_yang/index.html" target="_blank">Prof. Yi Yang</a>. 
-                            In past years, he worked at tech institutions including WeXin Group (Tencent), Kwai Tech, Tencent AI Lab, and Baidu Research.
-                        </p>
-                        <!-- <p class="lead" style="font-style: italic; font-weight: bold;">
-                            We are actively looking for PhD students, visiting students, and research interns at Zhejiang University or our collaborating tech institutions. If you are interested in our research, please do not hesitate to contact me.
-                        </p> -->
-                    </div>
+                <div>
+                    <p class="lead">
+                        Yu Lu (路雨) is a Postdoctoral Researcher at Zhejiang University, where he is leading a small research team that mostly works on video and image generative models. Before that, he obtained his Ph.D. degree at University of Technology Sydney (UTS). His academic advisor is <a href="http://reler.net/people/yi_yang/index.html" target="_blank">Prof. Yi Yang</a>.
+                        In past years, he worked at tech institutions including WeXin Group (Tencent), Kwai Tech, Tencent AI Lab, and Baidu Research.
+                    </p>
+                </div>
 
-                    <!-- Publications -->
-                    <!-- About Me -->
-                    <!-- <hr> -->
-                    <hr>
-                    <div>
-                        <h3 class="subtitle">News</h3>
+                <hr>
+                <div>
+                    <h3 class="subtitle">News</h3>
                         <ul class="list-group">
                             <li class="list-group-item border-0 py-1"><b>[Apr 2026]</b> <span class="badge-new">New</span> <a href="https://icml2026-f2s-workshop.github.io/">Long Video Generation Workshop </a> at ICML 2026 is now accepting submissions. Deadline: Apr 30th.</li>
-							<li class="list-group-item border-0 py-1"><b>[Mar 2026]</b> We have released the paper, code, and pretrained model for  <a href="https://arxiv.org/pdf/2603.19228v1">SAMA</a>, which delivers video editing performance comparable to leading commercial systems such as Kling and Pika. </li>
-							<li class="list-group-item border-0 py-1"><b>[Feb 2026]</b> <a href="https://arxiv.org/pdf/2602.22150">CoLoGen</a> accepted by CVPR 2026!</li>
+                            <li class="list-group-item border-0 py-1"><b>[Mar 2026]</b> We have released the paper, code, and pretrained model for <a href="https://arxiv.org/pdf/2603.19228v1">SAMA</a>, which delivers video editing performance comparable to leading commercial systems such as Kling and Pika.</li>
+                            <li class="list-group-item border-0 py-1"><b>[Feb 2026]</b> <a href="https://arxiv.org/pdf/2602.22150">CoLoGen</a> accepted by CVPR 2026!</li>
                             <li class="list-group-item border-0 py-1"><b>[Sep 2025]</b> <a href="https://arxiv.org/abs/2506.00993">FlexSelect</a> and <a href="https://arxiv.org/abs/2504.20690">ICEdit</a> accepted by NeurIPS 2025!</li>
                             <li class="list-group-item border-0 py-1"><b>[July 2025]</b> We have released the paper <a href="https://arxiv.org/pdf/2507.00162">FreeLong++</a> for long video generation with 8x longer extension!</li>
-			                <li class="list-group-item border-0 py-1"><b>[June 2025]</b> We have released the paper <a href="https://arxiv.org/pdf/2506.00993">FlexSelect</a> for long video understanding with 9x faster than baseline!</li>
-                            <li class="list-group-item border-0 py-1"><b>[May 2025]</b> We have released the paper <a href="https://arxiv.org/abs/2504.20690">In-context edit</a> for image editing!</li>
-                            <li class="list-group-item border-0 py-1"><b>[Feb 2025]</b> <a href="https://arxiv.org/pdf/2503.01725">HarmonySet</a> accepted by CVPR 2025!</li>
-                            <li class="list-group-item border-0 py-1"><b>[Dec 2024]</b> Paper on Video-Text Retrieval with unlabeled videos accepted by TIP 2024</li>
-                            <li class="list-group-item border-0 py-1"><b>[Sep 2024]</b> Two papers (FreeLong and AMP) accepted by NeurIPS 2024!</li>
-                            <li class="list-group-item border-0 py-1"><b>[Sep 2024]</b> Successfully defended Ph.D. thesis <a href="https://opus.lib.uts.edu.au/handle/10453/186243">"Zero-shot Natural Language-Driven Video Analysis and Synthesis"</a></li>
-                            <li class="list-group-item border-0 py-1"><b>[Jan 2024]</b> Paper on Zero-shot Video Grounding accepted by TIP 2024</li>
                         </ul>
-                    </div>
+                        <div class="collapse" id="moreNews">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 py-1"><b>[June 2025]</b> We have released the paper <a href="https://arxiv.org/pdf/2506.00993">FlexSelect</a> for long video understanding with 9x faster than baseline!</li>
+                                <li class="list-group-item border-0 py-1"><b>[May 2025]</b> We have released the paper <a href="https://arxiv.org/abs/2504.20690">In-context edit</a> for image editing!</li>
+                                <li class="list-group-item border-0 py-1"><b>[Feb 2025]</b> <a href="https://arxiv.org/pdf/2503.01725">HarmonySet</a> accepted by CVPR 2025!</li>
+                                <li class="list-group-item border-0 py-1"><b>[Dec 2024]</b> Paper on Video-Text Retrieval with unlabeled videos accepted by TIP 2024</li>
+                                <li class="list-group-item border-0 py-1"><b>[Sep 2024]</b> Two papers (FreeLong and AMP) accepted by NeurIPS 2024!</li>
+                                <li class="list-group-item border-0 py-1"><b>[Sep 2024]</b> Successfully defended Ph.D. thesis <a href="https://opus.lib.uts.edu.au/handle/10453/186243">"Zero-shot Natural Language-Driven Video Analysis and Synthesis"</a></li>
+                                <li class="list-group-item border-0 py-1"><b>[Jan 2024]</b> Paper on Zero-shot Video Grounding accepted by TIP 2024</li>
+                            </ul>
+                        </div>
+                    <a class="btn-toggle-news" data-toggle="collapse" href="#moreNews" role="button" aria-expanded="false" aria-controls="moreNews">Show more</a>
+                </div>
 
-
-                    <hr>
-                    <div>
-                        <h3 class="subtitle">Selected Publications</h3>
+                <hr>
+                <div>
+                    <h3 class="subtitle">Selected Publications</h3>
 
 
                         <!--SAMA-->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/SAMA.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -164,7 +249,7 @@
                         </div>
 
                         <!--CoLoGen-->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/CoLoGen.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -180,7 +265,7 @@
                         </div>
 
                         <!-- FreeLong++-->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/FreeLong++.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -196,7 +281,7 @@
                         </div>
 
                         <!-- FlexSelect-->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/flexselect.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -212,7 +297,7 @@
                         </div>
 			    
                         <!-- In-Context Edit -->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/icedit.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -228,7 +313,7 @@
                         </div>
 
                         <!-- HarmonySet -->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/harmonyset.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -246,7 +331,7 @@ Video-Music Semantic Alignment and Temporal Synchronization</span></br>
 
 
                         <!-- FreeLong -->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/FreeLong.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -279,7 +364,7 @@ Video-Music Semantic Alignment and Temporal Synchronization</span></br>
                         </div> -->
 
                         <!-- FlowZero -->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/FlowZero.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -312,7 +397,7 @@ Video-Music Semantic Alignment and Temporal Synchronization</span></br>
                         </div> -->
 
                         <!-- TIP -->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/TIP.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -328,7 +413,7 @@ Video-Music Semantic Alignment and Temporal Synchronization</span></br>
                         </div>
 
                         <!-- TMM -->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/TMM.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -360,7 +445,7 @@ Video-Music Semantic Alignment and Temporal Synchronization</span></br>
                         </div> -->
 
                         <!-- CRIS -->
-                        <div class="row">
+                        <div class="row pub-row">
                             <div class="col-sm-3">
                                 <img src="images/CRIS.png" alt="" class="figure-img img-fluid" alt="Responsive image" style="margin:10px;">
                             </div>
@@ -393,40 +478,27 @@ Video-Music Semantic Alignment and Temporal Synchronization</span></br>
 
 
 
-                        </div>
-            <div>
-                <hr>
-                <h3 class="subtitle">Professional Activities</h3>
-
-                <div class="row">
-                    <div class="col" style="margin-top: auto; margin-bottom: auto;">
-                        <p class="lead">
-                            <span class="font-weight-bold">Journal Review: </span> <br>
-                            TPAMI, TIP, TMM, KBS
-                        </p>
-                    </div>
                 </div>
-
-                <div class="row">
-                    <div class="col" style="margin-top: auto; margin-bottom: auto;">
-                        <p class="lead">
-                            <span class="font-weight-bold">Conference Review: </span> <br>
-                            CVPR, ICCV, ECCV, ACL, NeurIPS, ICLR, ICML
-                        </p>
-                    </div>
-                </div>
-
             </div>
-
-
-                <div class="col-md-2"></div>
-            </div>
+        </div>
+        <footer>
+                <div style="margin-bottom: 0.4rem;">Reviewer: TPAMI, TIP, TMM, KBS, CVPR, ICCV, ECCV, ACL, NeurIPS, ICLR, ICML</div>
+                &copy; 2026 Yu Lu &middot; Last updated: April 2026
+        </footer>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    $('#moreNews').on('show.bs.collapse', function () {
+        $('.btn-toggle-news').text('Show less');
+    }).on('hide.bs.collapse', function () {
+        $('.btn-toggle-news').text('Show more');
+    });
+    </script>
 </body>
 
 </html>
